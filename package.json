@@ -1,6 +1,6 @@
 {
   "name": "hogan-express-partials",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Express middleware for adding path-based partials support to hogan-express.",
   "main": "app.js",
   "author": "Jacob Lauzier <lauzierj@gmail.com> (https://github.com/lauzierj/)",

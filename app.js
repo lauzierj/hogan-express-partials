@@ -1,4 +1,4 @@
-var walker = require('fs-walker'),
+var walker = require('fs-walk'),
     path = require('path');
 
 exports.middleware = function() {
