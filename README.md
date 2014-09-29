@@ -17,8 +17,6 @@ To use hogan-express-partials
 ```js
 var partials = require('hogan-express-partials');
 
-var app = express();
-
 app.set('views', path.join(settings.path, 'views'));
 app.set('view engine', 'html');
 app.set('layout', 'layouts/default');
