@@ -32,7 +32,7 @@ In a layout or partial, you can include views-relative paths to other partials.
 
 ```js
 app.get '/', (req,res)->
-  res.locals = name: 'Andrew'
+  res.locals = name: 'Jacob'
   res.render 'template'
 ```
 
@@ -62,7 +62,7 @@ the callback would produce
 ```html
 <p>
   <strong>Message Layout</strong>
-  <em>Andrew says Hello World.</em>
+  <em>Jacob says Hello World.</em>
 </p>
 ```
 
