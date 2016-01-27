@@ -10,12 +10,12 @@ exports.middleware = function() {
 
       var viewDir = req.app.get('views');
       walker.walk(viewDir, function(basedir, filename, stat, next) {
-        var p = path.join(basedir, filename).replace(path.join(viewDir, '/'), '').replace('\\', '/');
+        var p = path.join(basedir, filename).replace(path.join(viewDir, '/'), '').replace(/\\/g, '/');
         if((path.extname(p) == '.html') && filename.indexOf('.') != 0) {
-          locals.partials['@' + p.replace('\\', '/')] = p;
+          locals.partials['@' + p.replace(/\\/g, '/')] = p;
           if(filename == 'index.html')
-            locals.partials['@' + path.dirname(p).replace('\\', '/')] = p;
-          locals.partials['@' + p.replace('.html', '').replace('\\', '/')] = p;
+            locals.partials['@' + path.dirname(p).replace(/\\/g, '/')] = p;
+          locals.partials['@' + p.replace('.html', '').replace(/\\/g, '/')] = p;
         }
         next();
       }, function() {
